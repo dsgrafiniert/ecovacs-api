@@ -19,6 +19,7 @@
 # that would be good to be able to see what the status is of 
 # your device. 
 # 
+import os
 from flask import Flask, render_template, flash, request
 from sucks import *
 
