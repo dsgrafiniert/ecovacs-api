@@ -32,11 +32,11 @@ valid_commands = ["clean", "charge", "edge", "spot", "stop", "playsound"]
 
 config = {
     "device_id": EcoVacsAPI.md5(str(time.time())), # value taken from the sucks source
-    "email": "ECOVACS_USER", # fill in your email
-    "password_hash": EcoVacsAPI.md5("ECOVACS_PASS"), # fill in your password
-    "country": "ECOVACS_COUNTRY", # your ecovacs country e.g. us
-    "continent": "ECOVACS_CONTINENT", # your continent e.g. na
-    "port": "ECOVACS_PORT" # port for your service to run on
+    "email": os.environ['ECOVACS_USER'], # fill in your email
+    "password_hash": EcoVacsAPI.md5(os.environ["ECOVACS_PASS"]), # fill in your password
+    "country": os.environ["ECOVACS_COUNTRY"], # your ecovacs country e.g. us
+    "continent": os.environ["ECOVACS_CONTINENT"], # your continent e.g. na
+    "port": "5050" # port for your service to run on
 }
 
 def sendCommand(device,command):
