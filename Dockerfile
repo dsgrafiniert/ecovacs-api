@@ -13,4 +13,4 @@ WORKDIR /code
 COPY ecovacs_flask.py /code
 
 EXPOSE 5050
-CMD [ "python", "/code/ecovacs-api/ecovacs_flask.py" ]
+CMD [ "python", "/code/ecovacs_flask.py" ]
